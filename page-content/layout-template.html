@@ -1,643 +1,949 @@
-<!-- TEMPLATE PLACEHOLDERS GUIDE:
-{{PAGE_TITLE}} - Main page title (e.g., "Free Invoicing Software for Small Business")
-{{PAGE_SUBTITLE}} - Hero subtitle description
-{{PAGE_SLUG}} - URL slug for breadcrumb (e.g., "invoicing")
-{{PAGE_NAME}} - Display name for breadcrumb (e.g., "Invoicing")
-{{CTA_URL}} - Call-to-action signup URL
-{{CTA_TEXT}} - Call-to-action button text
-{{CTA_UTM_SOURCE}} - UTM source parameter
+<!DOCTYPE html>
+<html lang="en">
 
-{{SECTION_1_TITLE}} - First zigzag section title
-{{SECTION_1_SUBTITLE}} - First zigzag section subtitle
-{{SECTION_1_HEADING}} - First feature heading
-{{SECTION_1_DESCRIPTION}} - First feature description
-{{SECTION_1_POINTS}} - Array of bullet points
-{{SECTION_1_IMAGE}} - Feature image URL
-{{SECTION_1_IMAGE_ALT}} - Image alt text
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Otto AI - Layout Template</title>
 
-Repeat for SECTION_2, SECTION_3, SECTION_4...
+    <!-- Meta Tags -->
+    <meta name="description" content="Otto AI - Your business management solution" />
+    <meta name="keywords" content="invoicing, bookkeeping, taxes, contracts" />
 
-{{STEPS_TITLE}} - Steps section title
-{{STEPS_SUBTITLE}} - Steps section subtitle
-{{STEP_1_TITLE}}, {{STEP_1_DESCRIPTION}} - Step details
-Repeat for STEP_2, STEP_3...
+    <!-- Favicon -->
+    <link rel="icon"
+        href="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/66d973362ee3ddecc6e0296d_otto_ai_bookkeeping_taxes_logo.webp"
+        type="image/webp" />
 
-{{FEATURES_TITLE}} - Features grid title
-{{FEATURES_SUBTITLE}} - Features grid subtitle
-{{FEATURE_1_TITLE}}, {{FEATURE_1_DESCRIPTION}} - Feature details
-Repeat for other features...
+    <!-- Global CSS - Webflow-Free -->
+    <link href="../global.min.css" rel="stylesheet" type="text/css" />
 
-{{COMPARISON_TITLE}} - Comparison table title
-{{COMPARISON_SUBTITLE}} - Comparison table subtitle
+    <!-- Google Fonts (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-{{TEMPLATES_TITLE}} - Templates section title
-{{TEMPLATES_SUBTITLE}} - Templates section subtitle
-{{TEMPLATE_1_URL}}, {{TEMPLATE_1_TITLE}}, {{TEMPLATE_1_DESCRIPTION}}
-Repeat for other templates...
+    <style>
+        /* Additional page-specific styles can go here */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
 
-{{RELATED_TITLE}} - Related services title
-{{RELATED_SUBTITLE}} - Related services subtitle
+<body class="ot-body">
+    <!-- Global Header Component -->
+    <div id="global-header" class="ot-navbar"></div>
 
-{{FAQ_TITLE}} - FAQ section title
-{{FAQ_1_QUESTION}}, {{FAQ_1_ANSWER}} - FAQ items
-Repeat for other FAQs...
--->
+    <!-- TEMPLATE CONTENT START -->
 
-<section class="page-bredcrumb">
-    <div class="w-layout-blockcontainer page-breadcrumb-container w-container">
-        <ul role="list" class="bredcrumb-menu">
-            <li class="breadcrumb-item"><a href="https://joinotto.com/" class="breadcrumb-items-link">Home</a></li>
-            <li class="breadcrumb-item">
-                <div class="separator">/</div>
-                <div class="active-page">{{PAGE_NAME}}</div>
-            </li>
-        </ul>
-    </div>
-</section>
+    <!-- TEMPLATE PLACEHOLDERS GUIDE:
+    {{PAGE_TITLE}} - Main page title (e.g., "Free Invoicing Software for Small Business")
+    {{PAGE_SUBTITLE}} - Hero subtitle description
+    {{PAGE_SLUG}} - URL slug for breadcrumb (e.g., "invoicing")
+    {{PAGE_NAME}} - Display name for breadcrumb (e.g., "Invoicing")
+    {{CTA_URL}} - Call-to-action signup URL
+    {{CTA_TEXT}} - Call-to-action button text
+    {{CTA_UTM_SOURCE}} - UTM source parameter
 
-<section class="ot-hero-section pt-150">
-    <div class="w-layout-blockcontainer otto-hero-container w-container">
-        <div class="ot-hero-content">
-            <div class="ot-hero-title-text">
-                <h1 class="ot-h1 ot-center">{{PAGE_TITLE}}</h1>
-                <p class="ot-subheadline">{{PAGE_SUBTITLE}}</p>
-            </div>
-            <a title="{{CTA_TEXT}}" href="{{CTA_URL}}" class="ot-primary-btn w-button">{{CTA_TEXT}}</a>
+    {{SECTION_1_TITLE}} - First zigzag section title
+    {{SECTION_1_SUBTITLE}} - First zigzag section subtitle
+    {{SECTION_1_HEADING}} - First feature heading
+    {{SECTION_1_DESCRIPTION}} - First feature description
+    {{SECTION_1_POINTS}} - Array of bullet points
+    {{SECTION_1_IMAGE}} - Feature image URL
+    {{SECTION_1_IMAGE_ALT}} - Image alt text
+
+    Repeat for SECTION_2, SECTION_3, SECTION_4...
+
+    {{STEPS_TITLE}} - Steps section title
+    {{STEPS_SUBTITLE}} - Steps section subtitle
+    {{STEP_1_TITLE}}, {{STEP_1_DESCRIPTION}} - Step details
+    Repeat for STEP_2, STEP_3...
+
+    {{FEATURES_TITLE}} - Features grid title
+    {{FEATURES_SUBTITLE}} - Features grid subtitle
+    {{FEATURE_1_TITLE}}, {{FEATURE_1_DESCRIPTION}} - Feature details
+    Repeat for other features...
+
+    {{COMPARISON_TITLE}} - Comparison table title
+    {{COMPARISON_SUBTITLE}} - Comparison table subtitle
+
+    {{TEMPLATES_TITLE}} - Templates section title
+    {{TEMPLATES_SUBTITLE}} - Templates section subtitle
+    {{TEMPLATE_1_URL}}, {{TEMPLATE_1_TITLE}}, {{TEMPLATE_1_DESCRIPTION}}
+    Repeat for other templates...
+
+    {{RELATED_TITLE}} - Related services title
+    {{RELATED_SUBTITLE}} - Related services subtitle
+
+    {{FAQ_TITLE}} - FAQ section title
+    {{FAQ_1_QUESTION}}, {{FAQ_1_ANSWER}} - FAQ items
+    Repeat for other FAQs...
+    -->
+
+    <section class="page-bredcrumb">
+        <div class="w-layout-blockcontainer page-breadcrumb-container w-container">
+            <ul role="list" class="bredcrumb-menu">
+                <li class="breadcrumb-item"><a href="https://joinotto.com/" class="breadcrumb-items-link">Home</a></li>
+                <li class="breadcrumb-item">
+                    <div class="separator">/</div>
+                    <div class="active-page">{{PAGE_NAME}}</div>
+                </li>
+            </ul>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="ot-logo-section">
-    <div id="myTicker" lumious-ticker="true" lumious-ticker-speed="50" class="ticker is-reversed">
-        <div lumious-ticker-content="true" class="ticker-content">
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5feedd83c2c460efab84_gersh.svg"
-                loading="lazy" width="111" height="30" alt="Gersh" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fef4709cf3f04a496c6_kensintongrey.svg"
-                loading="lazy" width="146" height="30" alt="Kensingtongrey" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedd25099b1cdca0384_ogm.svg"
-                loading="lazy" width="79" height="30" alt="OGM" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fee8198ca36a3422f09_upside-down.svg"
-                loading="lazy" width="58" height="30" alt="Upside Down" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedec294722ca057f41_dba.svg"
-                loading="lazy" width="88" height="30" alt="DBA" class="ticker-logo" />
-            <!-- Duplicate for seamless loop -->
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5feedd83c2c460efab84_gersh.svg"
-                loading="lazy" width="111" height="30" alt="Gersh" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fef4709cf3f04a496c6_kensintongrey.svg"
-                loading="lazy" width="146" height="30" alt="Kensingtongrey" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedd25099b1cdca0384_ogm.svg"
-                loading="lazy" width="79" height="30" alt="OGM" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fee8198ca36a3422f09_upside-down.svg"
-                loading="lazy" width="58" height="30" alt="Upside Down" class="ticker-logo" />
-            <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedec294722ca057f41_dba.svg"
-                loading="lazy" width="88" height="30" alt="DBA" class="ticker-logo" />
-        </div>
-    </div>
-</section>
-
-<!-- Main Features Section -->
-<section class="ot-section mb-33">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{SECTION_1_TITLE}}</h2>
-            <p class="ot-section-sub-head">{{SECTION_1_SUBTITLE}}</p>
-        </div>
-        <div class="ot-bk-zigzag-wrapper">
-            <!-- Feature 1 -->
-            <div class="w-layout-grid ot-bk-zigzag-grid">
-                <div class="ot-zigzag-content-block">
-                    <div class="ot-zigzag-title-text">
-                        <h3 class="ot-h2">{{SECTION_1_HEADING}}</h3>
-                        <p class="ot-zigzag-pera">{{SECTION_1_DESCRIPTION}}</p>
-                        <ul role="list" class="ot-point-ul w-list-unstyled">
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_1_POINT_1}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_1_POINT_2}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_1_POINT_3}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_1_POINT_4}}</p>
-                            </li>
-                        </ul>
-                    </div>
+    <section class="ot-hero-section pt-150">
+        <div class="w-layout-blockcontainer otto-hero-container w-container">
+            <div class="ot-hero-content">
+                <div class="ot-hero-title-text">
+                    <h1 class="ot-h1 ot-center">{{PAGE_TITLE}}</h1>
+                    <p class="ot-subheadline">{{PAGE_SUBTITLE}}</p>
                 </div>
-                <div id="w-node-_46571fa3-2ab9-33ee-399c-9ea95714a8a0-09422be0" class="ot-zigzag-image-block">
-                    <div class="ot-zigzag-image w-embed">
-                        <img data-cfsrc="{{SECTION_1_IMAGE}}"
-                            sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
-                            srcset="{{SECTION_1_IMAGE}} 500w, {{SECTION_1_IMAGE}}" alt="{{SECTION_1_IMAGE_ALT}}"
-                            title="{{SECTION_1_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
-                            src="{{SECTION_1_IMAGE}}">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 2 (Reversed) -->
-            <div class="w-layout-grid ot-bk-zigzag-grid reverce">
-                <div id="w-node-_2a9eb874-7c54-f349-a467-26b48cb3552c-09422be0" class="ot-zigzag-image-block">
-                    <div class="ot-zigzag-image w-embed">
-                        <img data-cfsrc="{{SECTION_2_IMAGE}}"
-                            sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
-                            srcset="{{SECTION_2_IMAGE}} 500w, {{SECTION_2_IMAGE}}" alt="{{SECTION_2_IMAGE_ALT}}"
-                            title="{{SECTION_2_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
-                            src="{{SECTION_2_IMAGE}}">
-                    </div>
-                </div>
-                <div class="ot-zigzag-content-block">
-                    <div class="ot-zigzag-title-text">
-                        <h3 class="ot-h2">{{SECTION_2_HEADING}}</h3>
-                        <p class="ot-zigzag-pera">{{SECTION_2_DESCRIPTION}}</p>
-                        <ul role="list" class="ot-point-ul w-list-unstyled">
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_2_POINT_1}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_2_POINT_2}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_2_POINT_3}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_2_POINT_4}}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 3 -->
-            <div class="w-layout-grid ot-bk-zigzag-grid">
-                <div class="ot-zigzag-content-block">
-                    <div class="ot-zigzag-title-text">
-                        <h3 class="ot-h2">{{SECTION_3_HEADING}}</h3>
-                        <p class="ot-zigzag-pera">{{SECTION_3_DESCRIPTION}}</p>
-                        <ul role="list" class="ot-point-ul w-list-unstyled">
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_3_POINT_1}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_3_POINT_2}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_3_POINT_3}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_3_POINT_4}}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="w-node-_9926acdd-0fac-d1b5-4344-91be2e927717-09422be0" class="ot-zigzag-image-block">
-                    <div class="ot-zigzag-image w-embed">
-                        <img data-cfsrc="{{SECTION_3_IMAGE}}"
-                            sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
-                            srcset="{{SECTION_3_IMAGE}} 500w, {{SECTION_3_IMAGE}}" alt="{{SECTION_3_IMAGE_ALT}}"
-                            title="{{SECTION_3_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
-                            src="{{SECTION_3_IMAGE}}">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Feature 4 (Reversed) -->
-            <div class="w-layout-grid ot-bk-zigzag-grid reverce">
-                <div id="w-node-a10055a3-a35c-081d-31cb-5b80630333ec-09422be0" class="ot-zigzag-image-block">
-                    <div class="ot-zigzag-image w-embed">
-                        <img data-cfsrc="{{SECTION_4_IMAGE}}"
-                            sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
-                            srcset="{{SECTION_4_IMAGE}} 500w, {{SECTION_4_IMAGE}}" alt="{{SECTION_4_IMAGE_ALT}}"
-                            title="{{SECTION_4_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
-                            src="{{SECTION_4_IMAGE}}">
-                    </div>
-                </div>
-                <div class="ot-zigzag-content-block">
-                    <div class="ot-zigzag-title-text">
-                        <h3 class="ot-h2">{{SECTION_4_HEADING}}</h3>
-                        <p class="ot-zigzag-pera">{{SECTION_4_DESCRIPTION}}</p>
-                        <ul role="list" class="ot-point-ul w-list-unstyled">
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_4_POINT_1}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_4_POINT_2}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_4_POINT_3}}</p>
-                            </li>
-                            <li class="ot-point-li">
-                                <p class="ot-zigzag-pera">{{SECTION_4_POINT_4}}</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <a title="{{CTA_TEXT}}" href="{{CTA_URL}}" class="ot-primary-btn w-button">{{CTA_TEXT}}</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- How to Use Steps Section -->
-<section class="ot-section mb-60">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{STEPS_TITLE}}</h2>
-            <p class="ot-section-sub-head">{{STEPS_SUBTITLE}}</p>
-        </div>
-        <div class="w-layout-grid ot-bk-step-grid">
-            <div class="ot-bk-step-block">
-                <div class="ot-bk-step-wrap">
-                    <div class="ot-bk-step-inner-wrap">
-                        <div class="ot-bk-step">1</div>
-                    </div>
-                    <div class="ot-bk-step-text">Step</div>
-                </div>
-                <p class="ot-bk-step-title">{{STEP_1_TITLE}}</p>
-                <p class="ot-bk-step-pera">{{STEP_1_DESCRIPTION}}</p>
-            </div>
-            <div class="ot-bk-step-block">
-                <div class="ot-bk-step-wrap">
-                    <div class="ot-bk-step-inner-wrap">
-                        <div class="ot-bk-step">2</div>
-                    </div>
-                    <div class="ot-bk-step-text">Step</div>
-                </div>
-                <p class="ot-bk-step-title">{{STEP_2_TITLE}}</p>
-                <p class="ot-bk-step-pera">{{STEP_2_DESCRIPTION}}</p>
-            </div>
-            <div id="w-node-_78378eed-b1d1-9d6e-a9c3-5b9e6194d62d-09422be0" class="ot-bk-step-block">
-                <div class="ot-bk-step-wrap">
-                    <div class="ot-bk-step-inner-wrap">
-                        <div class="ot-bk-step">3</div>
-                    </div>
-                    <div class="ot-bk-step-text">Step</div>
-                </div>
-                <p class="ot-bk-step-title">{{STEP_3_TITLE}}</p>
-                <p class="ot-bk-step-pera">{{STEP_3_DESCRIPTION}}</p>
+    <section class="ot-logo-section">
+        <div id="myTicker" lumious-ticker="true" lumious-ticker-speed="50" class="ticker is-reversed">
+            <div lumious-ticker-content="true" class="ticker-content">
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5feedd83c2c460efab84_gersh.svg"
+                    loading="lazy" width="111" height="30" alt="Gersh" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fef4709cf3f04a496c6_kensintongrey.svg"
+                    loading="lazy" width="146" height="30" alt="Kensingtongrey" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedd25099b1cdca0384_ogm.svg"
+                    loading="lazy" width="79" height="30" alt="OGM" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fee8198ca36a3422f09_upside-down.svg"
+                    loading="lazy" width="58" height="30" alt="Upside Down" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedec294722ca057f41_dba.svg"
+                    loading="lazy" width="88" height="30" alt="DBA" class="ticker-logo" />
+                <!-- Duplicate for seamless loop -->
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5feedd83c2c460efab84_gersh.svg"
+                    loading="lazy" width="111" height="30" alt="Gersh" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fef4709cf3f04a496c6_kensintongrey.svg"
+                    loading="lazy" width="146" height="30" alt="Kensingtongrey" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedd25099b1cdca0384_ogm.svg"
+                    loading="lazy" width="79" height="30" alt="OGM" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fee8198ca36a3422f09_upside-down.svg"
+                    loading="lazy" width="58" height="30" alt="Upside Down" class="ticker-logo" />
+                <img src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/679c5fedec294722ca057f41_dba.svg"
+                    loading="lazy" width="88" height="30" alt="DBA" class="ticker-logo" />
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Features Grid Section -->
-<section class="ot-section mb-60">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{FEATURES_TITLE}}</h2>
-            <p class="ot-section-sub-head">{{FEATURES_SUBTITLE}}</p>
-        </div>
-        <div class="w-layout-grid ot-wc-grid">
-            <div class="ot-wc-block">
-                <div class="ot-features-icon fa-900"></div>
-                <h3 class="ot-wc-h3">{{FEATURE_1_TITLE}}</h3>
-                <p class="ot-wc-pera">{{FEATURE_1_DESCRIPTION}}</p>
+    <!-- Main Features Section -->
+    <section class="ot-section mb-33">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{SECTION_1_TITLE}}</h2>
+                <p class="ot-section-sub-head">{{SECTION_1_SUBTITLE}}</p>
             </div>
-            <div class="ot-wc-block">
-                <div class="ot-features-icon fa-900"></div>
-                <h3 class="ot-wc-h3">{{FEATURE_2_TITLE}}</h3>
-                <p class="ot-wc-pera">{{FEATURE_2_DESCRIPTION}}</p>
-            </div>
-            <div class="ot-wc-block">
-                <div class="ot-features-icon"></div>
-                <h3 class="ot-wc-h3">{{FEATURE_3_TITLE}}</h3>
-                <p class="ot-wc-pera">{{FEATURE_3_DESCRIPTION}}</p>
-            </div>
-            <div class="ot-wc-block">
-                <div class="ot-features-icon"></div>
-                <h3 class="ot-wc-h3">{{FEATURE_4_TITLE}}</h3>
-                <p class="ot-wc-pera">{{FEATURE_4_DESCRIPTION}}</p>
-            </div>
-            <div class="ot-wc-block">
-                <div class="ot-features-icon"></div>
-                <h3 class="ot-wc-h3">{{FEATURE_5_TITLE}}</h3>
-                <p class="ot-wc-pera">{{FEATURE_5_DESCRIPTION}}</p>
-            </div>
-            <div class="ot-wc-block">
-                <div class="ot-features-icon"></div>
-                <h3 class="ot-wc-h3">{{FEATURE_6_TITLE}}</h3>
-                <p class="ot-wc-pera">{{FEATURE_6_DESCRIPTION}}</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Comparison Table Section -->
-<section class="ot-section mb-60">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{COMPARISON_TITLE}}</h2>
-            <div class="flex-gap">
-                <p class="ot-section-sub-head">{{COMPARISON_SUBTITLE}}</p>
-            </div>
-        </div>
-        <div class="ot-comparison-table-wrapper">
-            <!-- Comparison Table Header -->
-            <div class="w-layout-grid ot-comparison-grid">
-                <div class="ot-comparision-grid-block"></div>
-                <div class="ot-comparision-grid-block center">
-                    <div class="ot-comparision-head">Otto AI</div>
-                </div>
-                <div class="ot-comparision-grid-block center">
-                    <div class="ot-comparision-head"><a href="{{COMPETITOR_1_URL}}"
-                            class="link-5">{{COMPETITOR_1_NAME}}</a></div>
-                </div>
-                <div class="ot-comparision-grid-block center">
-                    <div class="ot-comparision-head"><a href="{{COMPETITOR_2_URL}}"
-                            class="link-6">{{COMPETITOR_2_NAME}}</a></div>
-                </div>
-                <div class="ot-comparision-grid-block center">
-                    <div class="ot-comparision-head"><a href="{{COMPETITOR_3_URL}}"
-                            class="link-7">{{COMPETITOR_3_NAME}}</a></div>
-                </div>
-                <div class="ot-comparision-grid-block center">
-                    <div class="ot-comparision-head"><a href="{{COMPETITOR_4_URL}}"
-                            class="link-8">{{COMPETITOR_4_NAME}}</a></div>
-                </div>
-                <div class="ot-comparision-grid-block center">
-                    <div class="ot-comparision-head">{{COMPETITOR_5_NAME}}</div>
-                </div>
-            </div>
-
-            <!-- Comparison Rows (Repeat for each feature) -->
-            <div class="w-layout-grid ot-comparison-grid">
-                <div class="ot-comparision-grid-block">
-                    <div class="ot-comparision-head">{{COMPARISON_ROW_1_FEATURE}}</div>
-                </div>
-                <div class="ot-comparision-grid-block">
-                    <div class="ot-comparision-icon-{{COMPARISON_ROW_1_OTTO}}"></div>
-                </div>
-                <div class="ot-comparision-grid-block">
-                    <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_1}}"></div>
-                </div>
-                <div class="ot-comparision-grid-block">
-                    <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_2}}"></div>
-                </div>
-                <div class="ot-comparision-grid-block">
-                    <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_3}}"></div>
-                </div>
-                <div class="ot-comparision-grid-block">
-                    <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_4}}"></div>
-                </div>
-                <div class="ot-comparision-grid-block">
-                    <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_5}}"></div>
-                </div>
-            </div>
-
-            <!-- Add more comparison rows as needed -->
-            <!-- Use: check or close for icon values -->
-        </div>
-    </div>
-</section>
-
-<!-- Templates Section -->
-<section class="ot-section mb-60">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{TEMPLATES_TITLE}}</h2>
-            <p class="ot-section-sub-head">{{TEMPLATES_SUBTITLE}}</p>
-        </div>
-        <div class="w-layout-grid o-tax-templates-grid">
-            <a href="{{TEMPLATE_1_URL}}" class="o-tax-templates-link w-inline-block">
-                <div class="o-tax-templates-top">
-                    <div class="o-tax-templates-icon-text">
-                        <div class="o-tax-templates-icon"></div>
-                        <div class="o-tax-templates-span">{{TEMPLATE_1_TYPE}}</div>
-                    </div>
-                    <p class="o-tax-templates-p">{{TEMPLATE_1_TITLE}}</p>
-                    <p class="ot-wc-pera">{{TEMPLATE_1_DESCRIPTION}}</p>
-                </div>
-                <div class="o-tax-templates-bottom">
-                    <div class="o-tex-category-icon"></div>
-                </div>
-            </a>
-
-            <!-- Repeat for more templates -->
-            <a href="{{TEMPLATE_2_URL}}" class="o-tax-templates-link w-inline-block">
-                <div class="o-tax-templates-top">
-                    <div class="o-tax-templates-icon-text">
-                        <div class="o-tax-templates-icon"></div>
-                        <div class="o-tax-templates-span">{{TEMPLATE_2_TYPE}}</div>
-                    </div>
-                    <p class="o-tax-templates-p">{{TEMPLATE_2_TITLE}}</p>
-                    <p class="ot-wc-pera">{{TEMPLATE_2_DESCRIPTION}}</p>
-                </div>
-                <div class="o-tax-templates-bottom">
-                    <div class="o-tex-category-icon"></div>
-                </div>
-            </a>
-
-            <!-- Add more template cards as needed -->
-        </div>
-        <div class="ot-tax-viwe-more">
-            <a href="{{TEMPLATES_VIEW_ALL_URL}}" class="ot-primary-btn">View All Templates</a>
-        </div>
-    </div>
-</section>
-
-<!-- Related Services Section -->
-<section class="ot-section mb-60">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{RELATED_TITLE}}</h2>
-            <p class="ot-section-sub-head">{{RELATED_SUBTITLE}}</p>
-        </div>
-        <div class="ot-financial-main-wraper">
-            <div class="w-layout-grid ot-financial-top-grid">
-                <a href="{{RELATED_1_URL}}" class="ot-financial-link-block w-inline-block">
-                    <div class="ot-financial-top">
-                        <div class="ot-financial-content">
-                            <h3 class="ot-financial-h3">{{RELATED_1_TITLE}}</h3>
-                            <p class="ot-financial-pera">{{RELATED_1_DESCRIPTION}}</p>
+            <div class="ot-bk-zigzag-wrapper">
+                <!-- Feature 1 -->
+                <div class="w-layout-grid ot-bk-zigzag-grid">
+                    <div class="ot-zigzag-content-block">
+                        <div class="ot-zigzag-title-text">
+                            <h3 class="ot-h2">{{SECTION_1_HEADING}}</h3>
+                            <p class="ot-zigzag-pera">{{SECTION_1_DESCRIPTION}}</p>
+                            <ul role="list" class="ot-point-ul w-list-unstyled">
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_1_POINT_1}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_1_POINT_2}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_1_POINT_3}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_1_POINT_4}}</p>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="w-embed">
-                            <img data-cfsrc="{{RELATED_1_IMAGE}}"
+                    </div>
+                    <div id="w-node-_46571fa3-2ab9-33ee-399c-9ea95714a8a0-09422be0" class="ot-zigzag-image-block">
+                        <div class="ot-zigzag-image w-embed">
+                            <img data-cfsrc="{{SECTION_1_IMAGE}}"
                                 sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
-                                srcset="{{RELATED_1_IMAGE}} 500w, {{RELATED_1_IMAGE}}" title="{{RELATED_1_TITLE}}"
-                                class="card-image" alt="{{RELATED_1_TITLE}}" width="292" height="201"
-                                src="{{RELATED_1_IMAGE}}">
+                                srcset="{{SECTION_1_IMAGE}} 500w, {{SECTION_1_IMAGE}}" alt="{{SECTION_1_IMAGE_ALT}}"
+                                title="{{SECTION_1_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
+                                src="{{SECTION_1_IMAGE}}">
                         </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 (Reversed) -->
+                <div class="w-layout-grid ot-bk-zigzag-grid reverce">
+                    <div id="w-node-_2a9eb874-7c54-f349-a467-26b48cb3552c-09422be0" class="ot-zigzag-image-block">
+                        <div class="ot-zigzag-image w-embed">
+                            <img data-cfsrc="{{SECTION_2_IMAGE}}"
+                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
+                                srcset="{{SECTION_2_IMAGE}} 500w, {{SECTION_2_IMAGE}}" alt="{{SECTION_2_IMAGE_ALT}}"
+                                title="{{SECTION_2_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
+                                src="{{SECTION_2_IMAGE}}">
+                        </div>
+                    </div>
+                    <div class="ot-zigzag-content-block">
+                        <div class="ot-zigzag-title-text">
+                            <h3 class="ot-h2">{{SECTION_2_HEADING}}</h3>
+                            <p class="ot-zigzag-pera">{{SECTION_2_DESCRIPTION}}</p>
+                            <ul role="list" class="ot-point-ul w-list-unstyled">
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_2_POINT_1}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_2_POINT_2}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_2_POINT_3}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_2_POINT_4}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="w-layout-grid ot-bk-zigzag-grid">
+                    <div class="ot-zigzag-content-block">
+                        <div class="ot-zigzag-title-text">
+                            <h3 class="ot-h2">{{SECTION_3_HEADING}}</h3>
+                            <p class="ot-zigzag-pera">{{SECTION_3_DESCRIPTION}}</p>
+                            <ul role="list" class="ot-point-ul w-list-unstyled">
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_3_POINT_1}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_3_POINT_2}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_3_POINT_3}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_3_POINT_4}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="w-node-_9926acdd-0fac-d1b5-4344-91be2e927717-09422be0" class="ot-zigzag-image-block">
+                        <div class="ot-zigzag-image w-embed">
+                            <img data-cfsrc="{{SECTION_3_IMAGE}}"
+                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
+                                srcset="{{SECTION_3_IMAGE}} 500w, {{SECTION_3_IMAGE}}" alt="{{SECTION_3_IMAGE_ALT}}"
+                                title="{{SECTION_3_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
+                                src="{{SECTION_3_IMAGE}}">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 (Reversed) -->
+                <div class="w-layout-grid ot-bk-zigzag-grid reverce">
+                    <div id="w-node-a10055a3-a35c-081d-31cb-5b80630333ec-09422be0" class="ot-zigzag-image-block">
+                        <div class="ot-zigzag-image w-embed">
+                            <img data-cfsrc="{{SECTION_4_IMAGE}}"
+                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
+                                srcset="{{SECTION_4_IMAGE}} 500w, {{SECTION_4_IMAGE}}" alt="{{SECTION_4_IMAGE_ALT}}"
+                                title="{{SECTION_4_IMAGE_TITLE}}" class="side-section-image" width="535" height="560"
+                                src="{{SECTION_4_IMAGE}}">
+                        </div>
+                    </div>
+                    <div class="ot-zigzag-content-block">
+                        <div class="ot-zigzag-title-text">
+                            <h3 class="ot-h2">{{SECTION_4_HEADING}}</h3>
+                            <p class="ot-zigzag-pera">{{SECTION_4_DESCRIPTION}}</p>
+                            <ul role="list" class="ot-point-ul w-list-unstyled">
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_4_POINT_1}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_4_POINT_2}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_4_POINT_3}}</p>
+                                </li>
+                                <li class="ot-point-li">
+                                    <p class="ot-zigzag-pera">{{SECTION_4_POINT_4}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Use Steps Section -->
+    <section class="ot-section mb-60">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{STEPS_TITLE}}</h2>
+                <p class="ot-section-sub-head">{{STEPS_SUBTITLE}}</p>
+            </div>
+            <div class="w-layout-grid ot-bk-step-grid">
+                <div class="ot-bk-step-block">
+                    <div class="ot-bk-step-wrap">
+                        <div class="ot-bk-step-inner-wrap">
+                            <div class="ot-bk-step">1</div>
+                        </div>
+                        <div class="ot-bk-step-text">Step</div>
+                    </div>
+                    <p class="ot-bk-step-title">{{STEP_1_TITLE}}</p>
+                    <p class="ot-bk-step-pera">{{STEP_1_DESCRIPTION}}</p>
+                </div>
+                <div class="ot-bk-step-block">
+                    <div class="ot-bk-step-wrap">
+                        <div class="ot-bk-step-inner-wrap">
+                            <div class="ot-bk-step">2</div>
+                        </div>
+                        <div class="ot-bk-step-text">Step</div>
+                    </div>
+                    <p class="ot-bk-step-title">{{STEP_2_TITLE}}</p>
+                    <p class="ot-bk-step-pera">{{STEP_2_DESCRIPTION}}</p>
+                </div>
+                <div id="w-node-_78378eed-b1d1-9d6e-a9c3-5b9e6194d62d-09422be0" class="ot-bk-step-block">
+                    <div class="ot-bk-step-wrap">
+                        <div class="ot-bk-step-inner-wrap">
+                            <div class="ot-bk-step">3</div>
+                        </div>
+                        <div class="ot-bk-step-text">Step</div>
+                    </div>
+                    <p class="ot-bk-step-title">{{STEP_3_TITLE}}</p>
+                    <p class="ot-bk-step-pera">{{STEP_3_DESCRIPTION}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section class="ot-section mb-60">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{FEATURES_TITLE}}</h2>
+                <p class="ot-section-sub-head">{{FEATURES_SUBTITLE}}</p>
+            </div>
+            <div class="w-layout-grid ot-wc-grid">
+                <div class="ot-wc-block">
+                    <div class="ot-features-icon fa-900"></div>
+                    <h3 class="ot-wc-h3">{{FEATURE_1_TITLE}}</h3>
+                    <p class="ot-wc-pera">{{FEATURE_1_DESCRIPTION}}</p>
+                </div>
+                <div class="ot-wc-block">
+                    <div class="ot-features-icon fa-900"></div>
+                    <h3 class="ot-wc-h3">{{FEATURE_2_TITLE}}</h3>
+                    <p class="ot-wc-pera">{{FEATURE_2_DESCRIPTION}}</p>
+                </div>
+                <div class="ot-wc-block">
+                    <div class="ot-features-icon"></div>
+                    <h3 class="ot-wc-h3">{{FEATURE_3_TITLE}}</h3>
+                    <p class="ot-wc-pera">{{FEATURE_3_DESCRIPTION}}</p>
+                </div>
+                <div class="ot-wc-block">
+                    <div class="ot-features-icon"></div>
+                    <h3 class="ot-wc-h3">{{FEATURE_4_TITLE}}</h3>
+                    <p class="ot-wc-pera">{{FEATURE_4_DESCRIPTION}}</p>
+                </div>
+                <div class="ot-wc-block">
+                    <div class="ot-features-icon"></div>
+                    <h3 class="ot-wc-h3">{{FEATURE_5_TITLE}}</h3>
+                    <p class="ot-wc-pera">{{FEATURE_5_DESCRIPTION}}</p>
+                </div>
+                <div class="ot-wc-block">
+                    <div class="ot-features-icon"></div>
+                    <h3 class="ot-wc-h3">{{FEATURE_6_TITLE}}</h3>
+                    <p class="ot-wc-pera">{{FEATURE_6_DESCRIPTION}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="ot-section mb-60">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{COMPARISON_TITLE}}</h2>
+                <div class="flex-gap">
+                    <p class="ot-section-sub-head">{{COMPARISON_SUBTITLE}}</p>
+                </div>
+            </div>
+            <div class="ot-comparison-table-wrapper">
+                <!-- Comparison Table Header -->
+                <div class="w-layout-grid ot-comparison-grid">
+                    <div class="ot-comparision-grid-block"></div>
+                    <div class="ot-comparision-grid-block center">
+                        <div class="ot-comparision-head">Otto AI</div>
+                    </div>
+                    <div class="ot-comparision-grid-block center">
+                        <div class="ot-comparision-head"><a href="{{COMPETITOR_1_URL}}"
+                                class="link-5">{{COMPETITOR_1_NAME}}</a></div>
+                    </div>
+                    <div class="ot-comparision-grid-block center">
+                        <div class="ot-comparision-head"><a href="{{COMPETITOR_2_URL}}"
+                                class="link-6">{{COMPETITOR_2_NAME}}</a></div>
+                    </div>
+                    <div class="ot-comparision-grid-block center">
+                        <div class="ot-comparision-head"><a href="{{COMPETITOR_3_URL}}"
+                                class="link-7">{{COMPETITOR_3_NAME}}</a></div>
+                    </div>
+                    <div class="ot-comparision-grid-block center">
+                        <div class="ot-comparision-head"><a href="{{COMPETITOR_4_URL}}"
+                                class="link-8">{{COMPETITOR_4_NAME}}</a></div>
+                    </div>
+                    <div class="ot-comparision-grid-block center">
+                        <div class="ot-comparision-head">{{COMPETITOR_5_NAME}}</div>
+                    </div>
+                </div>
+
+                <!-- Comparison Rows (Repeat for each feature) -->
+                <div class="w-layout-grid ot-comparison-grid">
+                    <div class="ot-comparision-grid-block">
+                        <div class="ot-comparision-head">{{COMPARISON_ROW_1_FEATURE}}</div>
+                    </div>
+                    <div class="ot-comparision-grid-block">
+                        <div class="ot-comparision-icon-{{COMPARISON_ROW_1_OTTO}}"></div>
+                    </div>
+                    <div class="ot-comparision-grid-block">
+                        <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_1}}"></div>
+                    </div>
+                    <div class="ot-comparision-grid-block">
+                        <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_2}}"></div>
+                    </div>
+                    <div class="ot-comparision-grid-block">
+                        <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_3}}"></div>
+                    </div>
+                    <div class="ot-comparision-grid-block">
+                        <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_4}}"></div>
+                    </div>
+                    <div class="ot-comparision-grid-block">
+                        <div class="ot-comparision-icon-{{COMPARISON_ROW_1_COMP_5}}"></div>
+                    </div>
+                </div>
+
+                <!-- Add more comparison rows as needed -->
+                <!-- Use: check or close for icon values -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates Section -->
+    <section class="ot-section mb-60">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{TEMPLATES_TITLE}}</h2>
+                <p class="ot-section-sub-head">{{TEMPLATES_SUBTITLE}}</p>
+            </div>
+            <div class="w-layout-grid o-tax-templates-grid">
+                <a href="{{TEMPLATE_1_URL}}" class="o-tax-templates-link w-inline-block">
+                    <div class="o-tax-templates-top">
+                        <div class="o-tax-templates-icon-text">
+                            <div class="o-tax-templates-icon"></div>
+                            <div class="o-tax-templates-span">{{TEMPLATE_1_TYPE}}</div>
+                        </div>
+                        <p class="o-tax-templates-p">{{TEMPLATE_1_TITLE}}</p>
+                        <p class="ot-wc-pera">{{TEMPLATE_1_DESCRIPTION}}</p>
+                    </div>
+                    <div class="o-tax-templates-bottom">
+                        <div class="o-tex-category-icon"></div>
                     </div>
                 </a>
 
-                <!-- Repeat for more related services -->
-                <a href="{{RELATED_2_URL}}" class="ot-financial-link-block w-inline-block">
-                    <div class="ot-financial-top">
-                        <div class="ot-financial-content">
-                            <h3 class="ot-financial-h3">{{RELATED_2_TITLE}}</h3>
-                            <p class="ot-financial-pera">{{RELATED_2_DESCRIPTION}}</p>
+                <!-- Repeat for more templates -->
+                <a href="{{TEMPLATE_2_URL}}" class="o-tax-templates-link w-inline-block">
+                    <div class="o-tax-templates-top">
+                        <div class="o-tax-templates-icon-text">
+                            <div class="o-tax-templates-icon"></div>
+                            <div class="o-tax-templates-span">{{TEMPLATE_2_TYPE}}</div>
                         </div>
-                        <div class="w-embed">
-                            <img data-cfsrc="{{RELATED_2_IMAGE}}"
-                                sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
-                                srcset="{{RELATED_2_IMAGE}} 500w, {{RELATED_2_IMAGE}}" title="{{RELATED_2_TITLE}}"
-                                class="card-image" alt="{{RELATED_2_TITLE}}" width="292" height="201"
-                                src="{{RELATED_2_IMAGE}}">
-                        </div>
+                        <p class="o-tax-templates-p">{{TEMPLATE_2_TITLE}}</p>
+                        <p class="ot-wc-pera">{{TEMPLATE_2_DESCRIPTION}}</p>
+                    </div>
+                    <div class="o-tax-templates-bottom">
+                        <div class="o-tex-category-icon"></div>
                     </div>
                 </a>
 
-                <!-- Add more related service cards -->
+                <!-- Add more template cards as needed -->
+            </div>
+            <div class="ot-tax-viwe-more">
+                <a href="{{TEMPLATES_VIEW_ALL_URL}}" class="ot-primary-btn">View All Templates</a>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Reviews/Testimonials Section -->
-<section class="ot-section mb-60 review">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{REVIEWS_TITLE}}</h2>
-            <p class="ot-section-sub-head">{{REVIEWS_SUBTITLE}}</p>
-        </div>
-        <div data-delay="4000" data-animation="slide" class="ot-review-slider w-slider" data-autoplay="true"
-            data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
-            data-nav-spacing="3" data-duration="500" data-infinite="true">
-            <div class="ot-review-slider-mask w-slider-mask">
-                <!-- Review Slide 1 -->
-                <div class="ot-review-slides w-slide">
-                    <div class="ot-review-slide-block">
-                        <div class="ot-slide-block-top">
-                            <p>{{REVIEW_1_ROLE}}</p>
+    <!-- Related Services Section -->
+    <section class="ot-section mb-60">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{RELATED_TITLE}}</h2>
+                <p class="ot-section-sub-head">{{RELATED_SUBTITLE}}</p>
+            </div>
+            <div class="ot-financial-main-wraper">
+                <div class="w-layout-grid ot-financial-top-grid">
+                    <a href="{{RELATED_1_URL}}" class="ot-financial-link-block w-inline-block">
+                        <div class="ot-financial-top">
+                            <div class="ot-financial-content">
+                                <h3 class="ot-financial-h3">{{RELATED_1_TITLE}}</h3>
+                                <p class="ot-financial-pera">{{RELATED_1_DESCRIPTION}}</p>
+                            </div>
+                            <div class="w-embed">
+                                <img data-cfsrc="{{RELATED_1_IMAGE}}"
+                                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
+                                    srcset="{{RELATED_1_IMAGE}} 500w, {{RELATED_1_IMAGE}}" title="{{RELATED_1_TITLE}}"
+                                    class="card-image" alt="{{RELATED_1_TITLE}}" width="292" height="201"
+                                    src="{{RELATED_1_IMAGE}}">
+                            </div>
                         </div>
-                        <div class="ot-slide-block-bottom">
-                            <p class="ot-review-slide-text">{{REVIEW_1_TEXT}}</p>
-                            <div class="ot-bm-athor-block">
-                                <div class="ot-bm-author-img-block">
-                                    <img src="{{REVIEW_1_IMAGE}}" loading="lazy" width="38" height="38"
-                                        alt="{{REVIEW_1_NAME}}" class="o-bm-image" />
+                    </a>
+
+                    <!-- Repeat for more related services -->
+                    <a href="{{RELATED_2_URL}}" class="ot-financial-link-block w-inline-block">
+                        <div class="ot-financial-top">
+                            <div class="ot-financial-content">
+                                <h3 class="ot-financial-h3">{{RELATED_2_TITLE}}</h3>
+                                <p class="ot-financial-pera">{{RELATED_2_DESCRIPTION}}</p>
+                            </div>
+                            <div class="w-embed">
+                                <img data-cfsrc="{{RELATED_2_IMAGE}}"
+                                    sizes="(max-width: 479px) 100vw, (max-width: 767px) 79vw, (max-width: 991px) 54vw, 533.0250244140625px"
+                                    srcset="{{RELATED_2_IMAGE}} 500w, {{RELATED_2_IMAGE}}" title="{{RELATED_2_TITLE}}"
+                                    class="card-image" alt="{{RELATED_2_TITLE}}" width="292" height="201"
+                                    src="{{RELATED_2_IMAGE}}">
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Add more related service cards -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews/Testimonials Section -->
+    <section class="ot-section mb-60 review">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{REVIEWS_TITLE}}</h2>
+                <p class="ot-section-sub-head">{{REVIEWS_SUBTITLE}}</p>
+            </div>
+            <div data-delay="4000" data-animation="slide" class="ot-review-slider w-slider" data-autoplay="true"
+                data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+                data-nav-spacing="3" data-duration="500" data-infinite="true">
+                <div class="ot-review-slider-mask w-slider-mask">
+                    <!-- Review Slide 1 -->
+                    <div class="ot-review-slides w-slide">
+                        <div class="ot-review-slide-block">
+                            <div class="ot-slide-block-top">
+                                <p>{{REVIEW_1_ROLE}}</p>
+                            </div>
+                            <div class="ot-slide-block-bottom">
+                                <p class="ot-review-slide-text">{{REVIEW_1_TEXT}}</p>
+                                <div class="ot-bm-athor-block">
+                                    <div class="ot-bm-author-img-block">
+                                        <img src="{{REVIEW_1_IMAGE}}" loading="lazy" width="38" height="38"
+                                            alt="{{REVIEW_1_NAME}}" class="o-bm-image" />
+                                    </div>
+                                    <div class="ot-bm-author-name-block">
+                                        <p class="ot-bm-author-name">{{REVIEW_1_NAME}}</p>
+                                        <p class="ot-bm-author-position">{{REVIEW_1_POSITION}}</p>
+                                    </div>
                                 </div>
-                                <div class="ot-bm-author-name-block">
-                                    <p class="ot-bm-author-name">{{REVIEW_1_NAME}}</p>
-                                    <p class="ot-bm-author-position">{{REVIEW_1_POSITION}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Slide 2 -->
+                    <div class="ot-review-slides w-slide">
+                        <div class="ot-review-slide-block">
+                            <div class="ot-slide-block-top">
+                                <p>{{REVIEW_2_ROLE}}</p>
+                            </div>
+                            <div class="ot-slide-block-bottom">
+                                <p class="ot-review-slide-text">{{REVIEW_2_TEXT}}</p>
+                                <div class="ot-bm-athor-block">
+                                    <div class="ot-bm-author-img-block">
+                                        <img src="{{REVIEW_2_IMAGE}}" loading="lazy" width="38" height="38"
+                                            alt="{{REVIEW_2_NAME}}" class="o-bm-image" />
+                                    </div>
+                                    <div class="ot-bm-author-name-block">
+                                        <p class="ot-bm-author-name">{{REVIEW_2_NAME}}</p>
+                                        <p class="ot-bm-author-position">{{REVIEW_2_POSITION}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review Slide 3 -->
+                    <div class="ot-review-slides w-slide">
+                        <div class="ot-review-slide-block">
+                            <div class="ot-slide-block-top">
+                                <p>{{REVIEW_3_ROLE}}</p>
+                            </div>
+                            <div class="ot-slide-block-bottom">
+                                <p class="ot-review-slide-text">{{REVIEW_3_TEXT}}</p>
+                                <div class="ot-bm-athor-block">
+                                    <div class="ot-bm-author-img-block">
+                                        <img src="{{REVIEW_3_IMAGE}}" loading="lazy" width="38" height="38"
+                                            alt="{{REVIEW_3_NAME}}" class="o-bm-image" />
+                                    </div>
+                                    <div class="ot-bm-author-name-block">
+                                        <p class="ot-bm-author-name">{{REVIEW_3_NAME}}</p>
+                                        <p class="ot-bm-author-position">{{REVIEW_3_POSITION}}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="ot-review-left-arrow w-slider-arrow-left">
+                    <div class="ot-financial-icon-block slider-arrow-left">
+                        <div class="ot-financial-licon"></div>
+                    </div>
+                </div>
+                <div class="ot-review-right-arrow w-slider-arrow-right">
+                    <div class="ot-financial-icon-block slider-arrow-right">
+                        <div class="ot-financial-licon"></div>
+                    </div>
+                </div>
+                <div class="nav-d-none w-slider-nav"></div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Review Slide 2 -->
-                <div class="ot-review-slides w-slide">
-                    <div class="ot-review-slide-block">
-                        <div class="ot-slide-block-top">
-                            <p>{{REVIEW_2_ROLE}}</p>
-                        </div>
-                        <div class="ot-slide-block-bottom">
-                            <p class="ot-review-slide-text">{{REVIEW_2_TEXT}}</p>
-                            <div class="ot-bm-athor-block">
-                                <div class="ot-bm-author-img-block">
-                                    <img src="{{REVIEW_2_IMAGE}}" loading="lazy" width="38" height="38"
-                                        alt="{{REVIEW_2_NAME}}" class="o-bm-image" />
-                                </div>
-                                <div class="ot-bm-author-name-block">
-                                    <p class="ot-bm-author-name">{{REVIEW_2_NAME}}</p>
-                                    <p class="ot-bm-author-position">{{REVIEW_2_POSITION}}</p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- FAQ Section -->
+    <section class="ot-section mb-60">
+        <div class="w-layout-blockcontainer otto-container w-container">
+            <div class="ot-tool-heading-wrapper">
+                <h2 class="ot-h2">{{FAQ_TITLE}}</h2>
+            </div>
+            <div class="ot-faq-main-container">
+                <!-- FAQ Item 1 -->
+                <div class="ot-faq-container">
+                    <div class="ot-faq-question">
+                        <h3 class="ot-faq-h3">{{FAQ_1_QUESTION}}</h3>
+                        <div class="ot-faq-icon"></div>
+                    </div>
+                    <div class="ot-faq-answer">
+                        <p class="ot-faq-ans-text">{{FAQ_1_ANSWER}}</p>
                     </div>
                 </div>
 
-                <!-- Review Slide 3 -->
-                <div class="ot-review-slides w-slide">
-                    <div class="ot-review-slide-block">
-                        <div class="ot-slide-block-top">
-                            <p>{{REVIEW_3_ROLE}}</p>
-                        </div>
-                        <div class="ot-slide-block-bottom">
-                            <p class="ot-review-slide-text">{{REVIEW_3_TEXT}}</p>
-                            <div class="ot-bm-athor-block">
-                                <div class="ot-bm-author-img-block">
-                                    <img src="{{REVIEW_3_IMAGE}}" loading="lazy" width="38" height="38"
-                                        alt="{{REVIEW_3_NAME}}" class="o-bm-image" />
-                                </div>
-                                <div class="ot-bm-author-name-block">
-                                    <p class="ot-bm-author-name">{{REVIEW_3_NAME}}</p>
-                                    <p class="ot-bm-author-position">{{REVIEW_3_POSITION}}</p>
-                                </div>
-                            </div>
-                        </div>
+                <!-- FAQ Item 2 -->
+                <div class="ot-faq-container">
+                    <div class="ot-faq-question">
+                        <h3 class="ot-faq-h3">{{FAQ_2_QUESTION}}</h3>
+                        <div class="ot-faq-icon"></div>
+                    </div>
+                    <div class="ot-faq-answer">
+                        <p class="ot-faq-ans-text">{{FAQ_2_ANSWER}}</p>
                     </div>
                 </div>
-            </div>
-            <div class="ot-review-left-arrow w-slider-arrow-left">
-                <div class="ot-financial-icon-block slider-arrow-left">
-                    <div class="ot-financial-licon"></div>
+
+                <!-- FAQ Item 3 -->
+                <div class="ot-faq-container">
+                    <div class="ot-faq-question">
+                        <h3 class="ot-faq-h3">{{FAQ_3_QUESTION}}</h3>
+                        <div class="ot-faq-icon"></div>
+                    </div>
+                    <div class="ot-faq-answer">
+                        <p class="ot-faq-ans-text">{{FAQ_3_ANSWER}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="ot-review-right-arrow w-slider-arrow-right">
-                <div class="ot-financial-icon-block slider-arrow-right">
-                    <div class="ot-financial-licon"></div>
+
+                <!-- FAQ Item 4 -->
+                <div class="ot-faq-container">
+                    <div class="ot-faq-question">
+                        <h3 class="ot-faq-h3">{{FAQ_4_QUESTION}}</h3>
+                        <div class="ot-faq-icon"></div>
+                    </div>
+                    <div class="ot-faq-answer">
+                        <p class="ot-faq-ans-text">{{FAQ_4_ANSWER}}</p>
+                    </div>
                 </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="ot-faq-container">
+                    <div class="ot-faq-question">
+                        <h3 class="ot-faq-h3">{{FAQ_5_QUESTION}}</h3>
+                        <div class="ot-faq-icon"></div>
+                    </div>
+                    <div class="ot-faq-answer">
+                        <p class="ot-faq-ans-text">{{FAQ_5_ANSWER}}</p>
+                    </div>
+                </div>
+
+                <!-- Add more FAQ items as needed -->
             </div>
-            <div class="nav-d-none w-slider-nav"></div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- FAQ Section -->
-<section class="ot-section mb-60">
-    <div class="w-layout-blockcontainer otto-container w-container">
-        <div class="ot-tool-heading-wrapper">
-            <h2 class="ot-h2">{{FAQ_TITLE}}</h2>
-        </div>
-        <div class="ot-faq-main-container">
-            <!-- FAQ Item 1 -->
-            <div class="ot-faq-container">
-                <div class="ot-faq-question">
-                    <h3 class="ot-faq-h3">{{FAQ_1_QUESTION}}</h3>
-                    <div class="ot-faq-icon"></div>
-                </div>
-                <div class="ot-faq-answer">
-                    <p class="ot-faq-ans-text">{{FAQ_1_ANSWER}}</p>
-                </div>
-            </div>
+    <!-- TEMPLATE CONTENT END -->
 
-            <!-- FAQ Item 2 -->
-            <div class="ot-faq-container">
-                <div class="ot-faq-question">
-                    <h3 class="ot-faq-h3">{{FAQ_2_QUESTION}}</h3>
-                    <div class="ot-faq-icon"></div>
-                </div>
-                <div class="ot-faq-answer">
-                    <p class="ot-faq-ans-text">{{FAQ_2_ANSWER}}</p>
-                </div>
-            </div>
+    <!-- Global CTA Component -->
+    <div id="global-cta"></div>
 
-            <!-- FAQ Item 3 -->
-            <div class="ot-faq-container">
-                <div class="ot-faq-question">
-                    <h3 class="ot-faq-h3">{{FAQ_3_QUESTION}}</h3>
-                    <div class="ot-faq-icon"></div>
-                </div>
-                <div class="ot-faq-answer">
-                    <p class="ot-faq-ans-text">{{FAQ_3_ANSWER}}</p>
-                </div>
-            </div>
+    <!-- Global Footer Component -->
+    <div id="global-footer"></div>
 
-            <!-- FAQ Item 4 -->
-            <div class="ot-faq-container">
-                <div class="ot-faq-question">
-                    <h3 class="ot-faq-h3">{{FAQ_4_QUESTION}}</h3>
-                    <div class="ot-faq-icon"></div>
-                </div>
-                <div class="ot-faq-answer">
-                    <p class="ot-faq-ans-text">{{FAQ_4_ANSWER}}</p>
-                </div>
-            </div>
+    <!-- ============================================ -->
+    <!-- SCRIPTS - All Webflow-Free -->
+    <!-- ============================================ -->
 
-            <!-- FAQ Item 5 -->
-            <div class="ot-faq-container">
-                <div class="ot-faq-question">
-                    <h3 class="ot-faq-h3">{{FAQ_5_QUESTION}}</h3>
-                    <div class="ot-faq-icon"></div>
-                </div>
-                <div class="ot-faq-answer">
-                    <p class="ot-faq-ans-text">{{FAQ_5_ANSWER}}</p>
-                </div>
-            </div>
+    <!-- Core Libraries -->
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66d80d61bcbc2701c640232c"
+        defer></script>
 
-            <!-- Add more FAQ items as needed -->
-        </div>
-    </div>
-</section>
+    <!-- Analytics & Tracking - All Async (non-blocking) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QKK3XRK2R2"></script>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WW5MJJW2"></script>
+    <script async src="https://analytics.ahrefs.com/analytics.js"></script>
+    <script async
+        src="https://cdn.prod.website-files.com/66d80d61bcbc2701c640232c/652d31f3dc22d7b4ee708e44/68304790754e563561712244/clarity_script-0.6.7.js"></script>
+    <script async src="https://scripts.clarity.ms/0.8.24/clarity.js"></script>
+    <script async src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script async src="https://cdn.amplitude.com/libs/analytics-browser-gtm-2.11.8-min.js.gz"></script>
+
+    <!-- Marketing - All Async -->
+    <script async src="https://getlaunchlist.com/js/widget-diy.js"></script>
+    <script async src="https://r2.leadsy.ai/tag.js"></script>
+    <script async src="https://cdn.firstpromoter.com/fpr.js"></script>
+    <script async src="https://assets.mailerlite.com/js/universal.js"></script>
+
+    <!-- UI Utilities - Defer -->
+    <script defer
+        src="https://app.termly.io/resource-blocker/5c8d97b3-1ff5-476c-b82c-ed8897c3bf78?autoBlock=on"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lumious-components@latest/component/ticker.js"></script>
+    <script defer
+        src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"></script>
+
+    <!-- Custom Vanilla JS - Webflow Replacement (Inline for Performance) -->
+    <script>
+        (function () {
+            'use strict';
+
+            function ready(fn) {
+                if (document.readyState !== 'loading') {
+                    fn();
+                } else {
+                    document.addEventListener('DOMContentLoaded', fn);
+                }
+            }
+
+            ready(function () {
+                // Add w-mod-js class for CSS compatibility
+                document.documentElement.classList.add('w-mod-js');
+
+                // Add touch/no-touch classes
+                if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                    document.documentElement.classList.add('w-mod-touch');
+                } else {
+                    document.documentElement.classList.add('w-mod-no-touch');
+                }
+
+                // Initialize all components
+                initNavbar();
+                initDropdowns();
+                initFAQ();
+
+                console.log('✅ Custom Webflow-free scripts loaded successfully!');
+            });
+
+            // Navbar functionality
+            function initNavbar() {
+                const navbars = document.querySelectorAll('[data-collapse]');
+                navbars.forEach(navbar => {
+                    const menuButton = navbar.querySelector('.w-nav-button');
+                    const menu = navbar.querySelector('.w-nav-menu');
+                    const overlay = navbar.querySelector('.w-nav-overlay');
+                    if (!menuButton || !menu) return;
+
+                    menuButton.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const isOpen = menu.classList.contains('w--open');
+                        if (isOpen) {
+                            closeMenu();
+                        } else {
+                            openMenu();
+                        }
+                    });
+
+                    function openMenu() {
+                        menu.classList.add('w--open');
+                        menuButton.classList.add('w--open');
+                        if (overlay) overlay.classList.add('w--open');
+                        document.body.style.overflow = 'hidden';
+                    }
+
+                    function closeMenu() {
+                        menu.classList.remove('w--open');
+                        menuButton.classList.remove('w--open');
+                        if (overlay) overlay.classList.remove('w--open');
+                        document.body.style.overflow = '';
+                    }
+
+                    if (overlay) overlay.addEventListener('click', closeMenu);
+                    document.addEventListener('keydown', function (e) {
+                        if (e.key === 'Escape' && menu.classList.contains('w--open')) {
+                            closeMenu();
+                        }
+                    });
+
+                    let resizeTimer;
+                    window.addEventListener('resize', function () {
+                        clearTimeout(resizeTimer);
+                        resizeTimer = setTimeout(function () {
+                            if (window.innerWidth > 991 && menu.classList.contains('w--open')) {
+                                closeMenu();
+                            }
+                        }, 250);
+                    });
+                });
+            }
+
+            // Dropdown functionality
+            function initDropdowns() {
+                const dropdowns = document.querySelectorAll('.w-dropdown');
+                dropdowns.forEach(dropdown => {
+                    const toggle = dropdown.querySelector('.w-dropdown-toggle');
+                    const list = dropdown.querySelector('.w-dropdown-list');
+                    if (!toggle || !list) return;
+
+                    const isHover = dropdown.getAttribute('data-hover') === 'true';
+                    const delay = Number(dropdown.getAttribute('data-delay') || 0);
+                    let timeout;
+
+                    if (isHover) {
+                        dropdown.addEventListener('mouseenter', function () {
+                            clearTimeout(timeout);
+                            timeout = setTimeout(() => openDropdown(), delay);
+                        });
+                        dropdown.addEventListener('mouseleave', function () {
+                            clearTimeout(timeout);
+                            timeout = setTimeout(() => closeDropdown(), delay);
+                        });
+                    } else {
+                        toggle.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            if (dropdown.classList.contains('w--open')) {
+                                closeDropdown();
+                            } else {
+                                document.querySelectorAll('.w-dropdown.w--open').forEach(d => {
+                                    if (d !== dropdown) {
+                                        d.classList.remove('w--open');
+                                        const dList = d.querySelector('.w-dropdown-list');
+                                        if (dList) dList.classList.remove('w--open');
+                                    }
+                                });
+                                openDropdown();
+                            }
+                        });
+                    }
+
+                    function openDropdown() {
+                        dropdown.classList.add('w--open');
+                        list.classList.add('w--open');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+
+                    function closeDropdown() {
+                        dropdown.classList.remove('w--open');
+                        list.classList.remove('w--open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    }
+
+                    document.addEventListener('click', function (e) {
+                        if (!dropdown.contains(e.target) && dropdown.classList.contains('w--open')) {
+                            closeDropdown();
+                        }
+                    });
+                });
+            }
+
+            // FAQ Functionality
+            function initFAQ() {
+                let questions = document.querySelectorAll(".ot-faq-question");
+
+                questions.forEach((question) => {
+                    let icon = question.querySelector(".ot-faq-icon");
+
+                    question.addEventListener("click", (event) => {
+                        const active = document.querySelector(".ot-faq-question.active");
+                        const activeIcon = document.querySelector(".ot-faq-icon.active");
+
+                        if (active && active !== question) {
+                            active.classList.toggle("active");
+                            if (activeIcon) activeIcon.classList.toggle("active");
+                            active.nextElementSibling.style.maxHeight = 0;
+                        }
+
+                        question.classList.toggle("active");
+                        if (icon) icon.classList.toggle("active");
+
+                        const answer = question.nextElementSibling;
+                        if (question.classList.contains("active")) {
+                            answer.style.maxHeight = answer.scrollHeight + "px";
+                        } else {
+                            answer.style.maxHeight = 0;
+                        }
+                    });
+                });
+            }
+        })();
+    </script>
+
+    <!-- Component Loader - Loads Header & Footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Component Loader Function
+            function loadComponent(elementId, filePath) {
+                return fetch(filePath)
+                    .then(response => {
+                        if (!response.ok) throw new Error(`Could not load ${filePath}: ${response.statusText}`);
+                        return response.text();
+                    })
+                    .then(html => {
+                        const element = document.getElementById(elementId);
+                        if (element) {
+                            element.innerHTML = html;
+                            executeScripts(element);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Component Loader Error:', error);
+                        const element = document.getElementById(elementId);
+                        if (element) element.innerHTML = `<p style="color:red; text-align:center;">Error loading ${filePath}. Use a local server (CORS).</p>`;
+                    });
+            }
+
+            // Execute scripts inserted via innerHTML
+            function executeScripts(container) {
+                const scripts = container.querySelectorAll('script');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+                    newScript.textContent = oldScript.textContent;
+                    document.body.appendChild(newScript);
+                });
+            }
+
+            // Load global components - Paths adjusted for subfolder
+            loadComponent('global-header', '../global-header/header.html');
+            loadComponent('global-cta', '../global-cta/cta.html');
+            loadComponent('global-footer', '../global-footer/footer.html');
+
+        });
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW5MJJW2" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
+</body>
+
+</html>
