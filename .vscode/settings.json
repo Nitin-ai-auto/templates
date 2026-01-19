@@ -1,0 +1,9 @@
+{
+    "css.lint.validProperties": [],
+    "css.lint.vendorPrefix": "ignore",
+    "css.lint.unknownProperties": "ignore",
+    "css.lint.propertyIgnoredDueToDisplay": "ignore",
+    "files.associations": {
+        "global.min.css": "plaintext"
+    }
+}
