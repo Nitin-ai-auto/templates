@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Resources for Creators - Otto</title>
+    <meta name="description"
+        content="Master your finances with Otto's tax resources for creators. Learn about quarterly taxes, write-offs, and 1099 forms.">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://pub-4045c43a30dd450b9e4b15e094bc8f07.r2.dev/css/global.min.css">
+
+    <style>
+        /* Temporary overrides/supplements to ensure good presentation if global css has gaps for this specific page structure */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        main {
+            padding-top: 120px;
+            /* Account for fixed header if applicable */
+            min-height: 80vh;
+        }
+
+        .hero-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .tax-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #e0e0e0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tax-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <!-- Header Placeholder -->
+    <!-- Instuction from header.html: This component should be loaded into a container with the following structure: -->
+    <div id="global-header" class="ot-navbar"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="ot-section">
+            <div class="w-container hero-section">
+                <h1 class="heading-jumbo">Tax Made Simple for Creators</h1>
+                <p class="paragraph-large" style="max-width: 600px; margin: 20px auto;">
+                    Stop worrying about the IRS. We help YouTubers, Influencers, and Freelancers manage their taxes,
+                    track write-offs, and file effortlessly.
+                </p>
+            </div>
+        </section>
+
+        <!-- Content Grid -->
+        <section class="ot-section" style="background-color: #f9f9f9; padding: 60px 0;">
+            <div class="w-container">
+                <h2 class="heading-2" style="text-align: center;">Essential Tax Topics</h2>
+
+                <div class="grid-3">
+                    <!-- Card 1 -->
+                    <div class="tax-card">
+                        <h3 class="heading-4">Quarterly Taxes</h3>
+                        <p class="paragraph">
+                            Estimated taxes must be paid four times a year. Missing these deadlines can result in
+                            penalties. Learn how to calculate and pay them on time.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="tax-card">
+                        <h3 class="heading-4">Common Write-Offs</h3>
+                        <p class="paragraph">
+                            From camera gear to home office space, discover what expenses you can deduct to lower your
+                            taxable income legally.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="tax-card">
+                        <h3 class="heading-4">1099 Forms</h3>
+                        <p class="paragraph">
+                            Understanding the different 1099 forms (NEC, K, MISC) is crucial for reporting your
+                            self-employment income correctly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Info -->
+        <section class="ot-section">
+            <div class="w-container">
+                <div
+                    style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <h2 class="heading-2">Why Otto for Taxes?</h2>
+                        <p class="paragraph">
+                            Traditional tax software isn't built for the creator economy. Otto understands that your
+                            "vacation" might be a content trip and your "lunch" might be a business meeting. We automate
+                            the boring stuff so you can focus on creating.
+                        </p>
+                        <ul style="margin-top: 20px;">
+                            <li style="margin-bottom: 10px;">✅ Automated expense categorization</li>
+                            <li style="margin-bottom: 10px;">✅ Real-time tax liability tracking</li>
+                            <li>✅ Expert CPA support available</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; min-width: 300px; text-align: center;">
+                        <!-- Placeholder for a graphic (simulated with standard classes or text) -->
+                        <div style="background: #f0f4f8; border-radius: 20px; padding: 40px;">
+                            <h3 class="heading-3" style="color: #2d3e50;">Save an Average of $4,000+</h3>
+                            <p>in missed deductions per year.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CTA Placeholder -->
+    <div id="cta-container"></div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-container"></div>
+
+    <!-- Script loader -->
+    <script>
+        async function loadComponent(url, elementId) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+                const el = document.getElementById(elementId);
+                if (el) el.innerHTML = html;
+            } catch (error) {
+                console.error('Error loading component:', url, error);
+            }
+        }
+
+        async function loadScripts(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const html = await response.text();
+
+                // create a temporary container to parse the scripts
+                const div = document.createElement('div');
+                div.innerHTML = html;
+
+                const scripts = div.querySelectorAll('script');
+
+                for (const oldScript of scripts) {
+                    const newScript = document.createElement('script');
+                    // Copy attributes (src, type, etc.)
+                    Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+
+                    // Maintain execution order for scripts with src
+                    newScript.async = false;
+
+                    // Copy content for inline scripts
+                    newScript.textContent = oldScript.textContent;
+
+                    // Append to body to execute
+                    document.body.appendChild(newScript);
+                }
+            } catch (error) {
+                console.error('Error loading scripts:', url, error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load visual components first
+            Promise.all([
+                loadComponent('https://pub-4045c43a30dd450b9e4b15e094bc8f07.r2.dev/components/header.html', 'global-header'),
+                loadComponent('https://pub-4045c43a30dd450b9e4b15e094bc8f07.r2.dev/components/cta.html', 'cta-container'),
+                loadComponent('https://pub-4045c43a30dd450b9e4b15e094bc8f07.r2.dev/components/footer.html', 'footer-container')
+            ]).then(() => {
+                // Load global scripts after components are verified in the DOM
+                loadScripts('https://pub-4045c43a30dd450b9e4b15e094bc8f07.r2.dev/js/scripts.html');
+            });
+        });
+    </script>
+</body>
+
+</html>
